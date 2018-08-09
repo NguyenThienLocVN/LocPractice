@@ -249,7 +249,7 @@ header { clear: both; padding-bottom: 20px; }
   .left-menu-title-1 { display: none; }
   .right-menu { width: 60%; display: flex; position: relative; }
   .drop:hover .dropdown-content-right { position: absolute; }
-  .slide { height: 550px; }
+  .slide { height: 552px; }
   .slide-img { height: 100%; }
   .slide-text { top: 10%; left: 30%; width: 500px; }
   .three-banner { margin: 20px 0; }
