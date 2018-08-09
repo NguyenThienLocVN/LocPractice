@@ -342,7 +342,6 @@ header{clear: both;padding-bottom: 20px;}
     border: 1px solid #e0e0e0;
     background: #fff;
     text-align: center;
-    margin-bottom: 20px;
 }
 .read-more{
     color: lightgrey;
@@ -358,20 +357,61 @@ header{clear: both;padding-bottom: 20px;}
     color:#fff;
 }
 
+// slogan
+.slogan{
+    width: 85%;
+    text-align: center;
+    margin: auto;
+    padding: 20px 20px;
+    border-bottom: 1px solid lightgrey;
+}
+
 // designer image
-.designer{
-    width: 100%;
+.designer-avatar{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    height: 150px;
+    border-bottom: 1px solid lightgrey;
 }
-.designer-img{width: 17%;}
-.designer-img-center{
-    border: 4px solid #d13638;
-    border-radius: 100%;
-    width: 20%;
+.desginer-box{width: 100px;text-align: center;}
+.avt1, .avt2, .avt3, .avt4, .avt5{
+    background: url('../img/author.png') no-repeat;
+    border: none;
+    border-radius: 100px;
 }
+.avt1{
+    width: 64px;
+    height: 64px;
+    background-position: 0 0;
+}
+.avt2{
+    width: 64px;
+    height: 64px;
+    background-position: -64px 0;
+}
+.avt3{
+    width: 64px;
+    height: 64px;
+    background-position: -128px 0;
+}
+.avt4{
+    width: 64px;
+    height: 64px;
+    background-position: -192px 0;
+}
+.avt5{
+    width: 64px;
+    height: 64px;
+    background-position: -256px 0;
+}
+
+.avt1:hover, .avt2:hover, .avt3:hover, .avt4:hover, .avt5:hover{
+    transform: scale(1.3);
+    transition: .5s ease-in-out;
+}
+
 // 4 service
+
 
 .service-item{
     display: flex;
@@ -647,12 +687,7 @@ header{clear: both;padding-bottom: 20px;}
 
 
     // designers
-    .designer{
-        width: 60%;
-        justify-content: space-between;
-        margin: auto;
-    }
-    .designer-img{transform: scale(0.8);}
+    .designer{}
 
 
 
