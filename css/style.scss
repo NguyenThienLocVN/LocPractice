@@ -680,7 +680,7 @@ header{clear: both;padding-bottom: 20px;}
         flex-direction: column;
         align-items: center;
         height: 120px;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     .subscribe-text{
         display: block;
@@ -803,5 +803,6 @@ header{clear: both;padding-bottom: 20px;}
     // footer
     .subscribe-content{
         flex-direction: row;
+        justify-content: space-between;
     }
 }
