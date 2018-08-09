@@ -147,11 +147,12 @@ header { clear: both; padding-bottom: 20px; }
 
 .service-img { padding-right: 10px; }
 
-.subscribe { width: 100%; background-color: #d13638; height: 120px; color: #fff; display: flex; align-items: center; justify-content: center; }
-.subscribe p { margin-top: unset; font-weight: bold; }
-.subscribe p .big { font-size: 25px; }
+.subscribe { width: 100%; background-color: #d13638; height: 120px; color: #fff; }
 
-.subscribe .subscribe-input { display: flex; }
+.subscribe-text { margin-top: unset; font-weight: bold; }
+.subscribe-text .big { font-size: 25px; margin: 0; }
+
+.subscribe .subscribe-input { display: flex; justify-content: center; }
 .subscribe .subscribe-input input { border: none; border-radius: 30px 0 0 30px; padding: 8px; }
 .subscribe .subscribe-input a { padding: 7px; background: #202833; color: #fff; border-radius: 0 30px 30px 0; }
 .subscribe .subscribe-input a:hover { background: darkorange; }
@@ -231,7 +232,8 @@ header { clear: both; padding-bottom: 20px; }
   .service { display: flex; flex-direction: column; width: 100%; }
   .service-col-1, .service-col-2 { display: flex; justify-content: space-between; margin: auto; width: 80%; }
   .service-item { width: 40%; }
-  .subscribe { flex-direction: column; }
+  .subscribe-content { width: 100%; display: flex; flex-direction: column; align-items: center; height: 120px; justify-content: space-between; }
+  .subscribe-text { display: block; text-align: center; }
   .content-info { width: 100%; flex-direction: row; justify-content: space-between; }
   .box-1, .box-2, .box-3 { width: 31%; }
   .box-3-product { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
@@ -244,7 +246,6 @@ header { clear: both; padding-bottom: 20px; }
   .logo { width: 45%; justify-content: flex-start; }
   .search-bar .search-input { border-radius: unset; }
   .menu-top-left, .menu-top-right { width: 33%; }
-  .subscribe { flex-direction: row; justify-content: space-evenly; }
   .left-menu { width: 25%; float: left; }
   .left-menu-title-1 { display: none; }
   .right-menu { width: 60%; display: flex; position: relative; }
@@ -262,4 +263,5 @@ header { clear: both; padding-bottom: 20px; }
   .two-banner, .one-banner { display: flex; width: 100%; justify-content: space-between; padding: 20px 0; }
   .service { flex-direction: row; }
   .service-col-1, .service-col-2 { justify-content: space-evenly; }
-  .service-item { width: 40%; } }
+  .service-item { width: 40%; }
+  .subscribe-content { flex-direction: row; } }
