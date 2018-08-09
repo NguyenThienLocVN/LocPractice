@@ -88,9 +88,9 @@ header{clear: both;padding-bottom: 20px;}
 .dropdown-content-language, .dropdown-content-currency {
     display: none;
     position: absolute;
-    width: 70px;
+    width: 90px;
     background: #fff;
-    top: 30px;
+    top: 35px;
     z-index: 99;
     line-height: 35px;
     border: 0.5px solid lightgrey;
@@ -286,10 +286,12 @@ header{clear: both;padding-bottom: 20px;}
     border: 2px solid #d13638;
     border-radius: 5px;
     text-align: center;
-    height: 380px;
 }
 .hurry-up, .time{
     display: none;
+}
+#time-number, .time-text{
+    display:none;
 }
 
 // List include category and product infomation, with grey background
@@ -536,11 +538,22 @@ header{clear: both;padding-bottom: 20px;}
     .hurry-up{
         display: block;
     }
-    #time{
-        font-size: 25px;
+    #time-number{
+        display: block;
+        font-size: 22pt;
         font-weight: bold;
         color:#202833;
     }
+    .time-text{
+        display: flex;
+        color:lightgrey;
+    }
+    .time-text-item{
+        width: 25%;
+    }
+
+
+    
 
     .arrival{
         display: block;
@@ -744,7 +757,9 @@ header{clear: both;padding-bottom: 20px;}
         display: flex;
         flex-direction: column;
     }
-
+    #time-number{
+        font-size: 35pt;
+    }
 
 
     // 

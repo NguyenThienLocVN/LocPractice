@@ -33,7 +33,7 @@ header { clear: both; padding-bottom: 20px; }
 
 .menu-item { height: 55px; flex: 1; justify-content: center; }
 
-.dropdown-content-language, .dropdown-content-currency { display: none; position: absolute; width: 70px; background: #fff; top: 30px; z-index: 99; line-height: 35px; border: 0.5px solid lightgrey; }
+.dropdown-content-language, .dropdown-content-currency { display: none; position: absolute; width: 90px; background: #fff; top: 35px; z-index: 99; line-height: 35px; border: 0.5px solid lightgrey; }
 .dropdown-content-language a, .dropdown-content-currency a { color: #202833; }
 .dropdown-content-language a:hover, .dropdown-content-currency a:hover { color: #d13638; }
 
@@ -108,9 +108,11 @@ header { clear: both; padding-bottom: 20px; }
 
 .deal-title, .arrival-title { margin-bottom: 20px; display: flex; justify-content: space-between; }
 
-.deal-info { padding: 15px; border: 2px solid #d13638; border-radius: 5px; text-align: center; height: 380px; }
+.deal-info { padding: 15px; border: 2px solid #d13638; border-radius: 5px; text-align: center; }
 
 .hurry-up, .time { display: none; }
+
+#time-number, .time-text { display: none; }
 
 .category-list { background: #F4F8F9; }
 
@@ -198,7 +200,9 @@ header { clear: both; padding-bottom: 20px; }
   .deal-info { width: 100%; height: 600px; }
   .deal-description { display: block; }
   .hurry-up { display: block; }
-  #time { font-size: 25px; font-weight: bold; color: #202833; }
+  #time-number { display: block; font-size: 22pt; font-weight: bold; color: #202833; }
+  .time-text { display: flex; color: lightgrey; }
+  .time-text-item { width: 25%; }
   .arrival { display: block; float: left; width: 66%; }
   .arrival a { color: lightgrey; }
   .arrival a:hover { color: #202833; }
@@ -252,6 +256,7 @@ header { clear: both; padding-bottom: 20px; }
   .list-banner { display: flex; justify-content: space-between; }
   .list-banner img { width: 32%; height: 200px; }
   .arrival-product-col-1, .arrival-product-col-2, .arrival-product-col-3 { width: 32%; display: flex; flex-direction: column; }
+  #time-number { font-size: 35pt; }
   .main-right { width: 75%; }
   .item1, .item2 { border-left: 0; }
   .two-banner, .one-banner { display: flex; width: 100%; justify-content: space-between; padding: 20px 0; }

@@ -49,7 +49,7 @@ function startTimer() {
 
 // ===================================================================
 // Function time countdown
-var upgradeTime = 1000000;
+var upgradeTime = 999999;
 var seconds = upgradeTime;
 function timer() {
     var days        = Math.floor(seconds/24/60/60);
@@ -61,7 +61,7 @@ function timer() {
     if (remainingSeconds < 10) {
         remainingSeconds = "0" + remainingSeconds; 
     }
-    document.getElementById('time').innerHTML = days + " : " + hours + " : " + minutes + " : " + remainingSeconds;
+    document.getElementById('time-number').innerHTML = days + " : " + hours + " : " + minutes + " : " + remainingSeconds;
     if (seconds == 0) {
         clearInterval(countdownTimer);
     } else {
