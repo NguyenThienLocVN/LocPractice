@@ -198,8 +198,7 @@ header { clear: both; padding-bottom: 20px; }
   .deal-info { width: 100%; height: 600px; }
   .deal-description { display: block; }
   .hurry-up { display: block; }
-  .time { display: flex; justify-content: space-between; }
-  #number { font-size: 25px; font-weight: bold; color: #202833; }
+  #time { font-size: 25px; font-weight: bold; color: #202833; }
   .arrival { display: block; float: left; width: 66%; }
   .arrival a { color: lightgrey; }
   .arrival a:hover { color: #202833; }
