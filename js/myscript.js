@@ -3,6 +3,7 @@ $(function(){
     startTimer();
     fixedNav();
     timer();
+    toCelsius();
 });
 
 
@@ -49,7 +50,7 @@ function startTimer() {
 
 // ===================================================================
 // Function time countdown
-var upgradeTime = 999999;
+var upgradeTime = 900000;
 var seconds = upgradeTime;
 function timer() {
     var days        = Math.floor(seconds/24/60/60);
@@ -86,4 +87,10 @@ function fixedNav(){
           }
         });
       }
+}
+
+
+function toCelsius(fahrenheit) {
+    return (5 / 9) * (fahrenheit - 32);
+    alert(5 / 9) * (fahrenheit - 32)
 }

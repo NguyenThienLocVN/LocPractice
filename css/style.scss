@@ -9,11 +9,11 @@ ul, li{
 a{text-decoration: none;}
 h4{margin: 0;}
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto:500');
 
 body{
     margin: 0;
-    font-family: 'Open Sans', serif;
+    font-family: 'Roboto', serif;
     font-size: 10pt;
     background: #fff;
 }
@@ -27,18 +27,21 @@ body{
 // button add to cart
 .add-cart{
     padding: 10px 20px;
-    border: none;
+    border: 1px solid #d13638;
     border-radius: 5px;
     background: #d13638;
     color: #fff;
+    cursor: pointer;
+    transition: 1s ease-in-out;
 }
 .add-cart:hover{
     background: #fff;
     color:#d13638;
     border: 1px solid #d13638;
+    
 }
 
-
+// Class for fixed navigation bar when scroll down
 .fixed-nav{
     position: fixed;
     top: 0;
@@ -58,7 +61,16 @@ body{
     margin: auto;
     padding: 0 10px 0 10px;
 }
-header{clear: both;padding-bottom: 20px;}
+header{clear: both;}
+
+// ===============Widget =====
+.facebook, .twitter, .feed, .pinterest, .connect{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+    padding-top: 15px;
+}
 
 // ====================================
 // ============ Top Navigation ========
@@ -83,6 +95,7 @@ header{clear: both;padding-bottom: 20px;}
 .menu-item{
     height: 55px;
     flex: 1;
+    flex-basis: 10em;
     justify-content: center;
 }
 .dropdown-content-language, .dropdown-content-currency {
@@ -113,8 +126,7 @@ header{clear: both;padding-bottom: 20px;}
     border: none;
     background: lightgrey;
     padding: 10px 0px;
-    border-top-left-radius:5px;
-    border-bottom-left-radius:5px;
+    border-radius: 5px 0 0 5px;
     cursor: pointer;
 }
 
@@ -122,13 +134,12 @@ header{clear: both;padding-bottom: 20px;}
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120px;
 }
 
 .search-bar{
     display: flex;
     text-align: center;
-    padding: 0 10px;
+    padding: 10px;
     width: 100%;
     .search-input{
         padding: 8px 15px;
@@ -152,7 +163,6 @@ header{clear: both;padding-bottom: 20px;}
 // wishlist and cart
 .more{
     display: flex;
-    padding: 45px 0;
     justify-content: center;
     cursor: pointer;
     .more-wish, .more-cart{
@@ -165,6 +175,7 @@ header{clear: both;padding-bottom: 20px;}
 
 
 // navigation
+.nav{height: 50px;}
 .left-menu{
     height: 50px;
     background: #d13638;
@@ -178,6 +189,7 @@ header{clear: both;padding-bottom: 20px;}
 .left-menu-title-1{
     border-right: 1px solid #fff;
     cursor: pointer;
+    height: 100%;
 }
 .left-menu-title-1, .left-menu-title-2{
     color:#fff;
@@ -220,20 +232,39 @@ header{clear: both;padding-bottom: 20px;}
 }
 
 // Menu 'Category' left vertical
-.category-menu{z-index: 99;}
+.category-menu{
+    position: absolute;
+    z-index: 99;
+    top: 50px;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    display: block;
+    background: #fff;
+}
 .category-menu-item{
     display: flex;
-    height: 50px;
+    height: 45px;
     background: #fff;
-    
 }
 .category-menu-item:hover{
-    background: lightgray;
+    background: #F3F3F3;
     color:#d13638;
     cursor: pointer;
 }
-.category-menu-item-img{
+.category-item {
+    width: 100%;
+    margin: auto;
+    border-bottom: 1px solid #E4E8E9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 5px;
+}
+.border-none{border: none;}
+.category-item-left{width: 100%;}
+.category-item img{
     padding: 15px;
+    float: left;
 }
 
 // Slide
@@ -268,6 +299,8 @@ header{clear: both;padding-bottom: 20px;}
     background: #202833;
     color: #fff;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 .shop-now:hover{background: darkorange;}
 
@@ -313,6 +346,10 @@ header{clear: both;padding-bottom: 20px;}
     display: flex;
     justify-content: space-between;
 }
+.main-title-right li{
+    padding: 0 15px;
+    border-right: 1px solid #e4e4e4;
+}
 .right-product-item{
     display: flex;
     align-items: center;
@@ -323,7 +360,9 @@ header{clear: both;padding-bottom: 20px;}
     margin-bottom: 15px;
 }
 .right-product-item img{width: 100px;}
-
+.product-text{
+    text-align: center;
+}
 
 // blog post
 .blog-title{
@@ -442,6 +481,7 @@ header{clear: both;padding-bottom: 20px;}
     .subscribe .subscribe-input{
         display: flex;
         justify-content: center;
+        padding-top: 40px;
         input{
             border: none;
             border-radius: 30px 0 0 30px;
@@ -575,6 +615,7 @@ header{clear: both;padding-bottom: 20px;}
     // deal
     .deal{width: 32%; float: left;margin-right: 2%;}
     .deal-info{width: 100%;height: 600px;}
+    .deal-info img{width: 100%;}
     .deal-description{display: block;}
     .hurry-up{
         display: block;
@@ -667,6 +708,7 @@ header{clear: both;padding-bottom: 20px;}
     .right-product-item img{width: 150px;}
     .product-text{
         margin-left: 20px;
+        text-align: center;
     }
 
 
@@ -708,7 +750,9 @@ header{clear: both;padding-bottom: 20px;}
 
 
     // footer
-
+    .subscribe .subscribe-input{
+        padding: unset;
+    }
     .subscribe-content{
         width: 100%;
         display: flex;
@@ -716,6 +760,7 @@ header{clear: both;padding-bottom: 20px;}
         align-items: center;
         height: 120px;
         justify-content: space-evenly;
+        padding: 10px;
     }
     .subscribe-text{
         display: block;
@@ -753,6 +798,8 @@ header{clear: both;padding-bottom: 20px;}
         width: 100%;
         border: 1px solid #e1e1e1;
         display: block;
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
     }
 
 
@@ -767,6 +814,10 @@ header{clear: both;padding-bottom: 20px;}
     .search-bar .search-input{border-radius: unset;}
     .menu-top-left, .menu-top-right{width: 33%;}
 
+    .category-item {
+        width: 80%;
+    }
+
     .subscribe {}
 
     .left-menu{width: 25%;float: left;}
@@ -775,11 +826,12 @@ header{clear: both;padding-bottom: 20px;}
         width: 60%;
         display: flex;
         position: relative;
+        height: 50px;
     }
     .drop:hover .dropdown-content-right {
         position: absolute;
     }
-    .slide{height: 552px;}
+    .slide{height: 497px;}
     .slide-img{height: 100%;}
     .slide-text{
         top: 10%;
@@ -797,6 +849,7 @@ header{clear: both;padding-bottom: 20px;}
         img{width: 32%;height: 200px}
     }
 
+    .deal-info img{width: 75%;}
     .arrival-product-col-1, .arrival-product-col-2, .arrival-product-col-3{
         width: 32%;
         display: flex;
