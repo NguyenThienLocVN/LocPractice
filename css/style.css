@@ -13,9 +13,9 @@ body { margin: 0; font-family: 'Roboto', serif; font-size: 10pt; background: #ff
 
 .add-cart { padding: 10px 20px; border: 1px solid #d13638; border-radius: 5px; background: #d13638; color: #fff; cursor: pointer; }
 
-.add-cart:hover { background: #fff; color: #d13638; border: 1px solid #d13638; }
+.add-cart:hover { background: #fff; color: #d13638; border: 1px solid #d13638; transition: .5s ease-in-out; }
 
-.fixed-nav { position: fixed; top: 0; left: 0; width: 100%; border-radius: unset; z-index: 99; }
+.fixed-nav { position: fixed; top: 0; left: 0; width: 100%; border-radius: unset; z-index: 99; height: 50px; background: #d13638; }
 
 .margin { height: 15px; }
 
@@ -25,7 +25,9 @@ body { margin: 0; font-family: 'Roboto', serif; font-size: 10pt; background: #ff
 
 header { clear: both; }
 
-.facebook, .twitter, .feed, .pinterest, .connect { width: 50px; height: 50px; border-radius: 10px 0 0 10px; text-align: center; padding-top: 15px; }
+#button-scroll-top { padding: 10px 15px; font-size: 30px; border-radius: 8px; background: #202833; border: 2px solid #202833; display: none; color: #fff; z-index: 999; position: fixed; bottom: 5%; left: 80%; opacity: 0.5; }
+
+#button-scroll-top:hover { opacity: 1; }
 
 .top-nav { width: 100%; height: 120px; background-color: #202833; color: #fff; }
 
@@ -279,7 +281,7 @@ header { clear: both; }
   .left-menu-title-1 { display: none; }
   .right-menu { width: 60%; display: flex; position: relative; height: 50px; }
   .drop:hover .dropdown-content-right { position: absolute; }
-  .slide { height: 497px; }
+  .slide { height: 497px; position: relative; width: 100%; }
   .slide-img { height: 100%; }
   .slide-text { top: 10%; left: 30%; width: 500px; }
   .three-banner { margin: 20px 0; }
@@ -294,4 +296,5 @@ header { clear: both; }
   .service { flex-direction: row; }
   .service-col-1, .service-col-2 { justify-content: space-evenly; }
   .service-item { width: 40%; }
-  .subscribe-content { flex-direction: row; justify-content: space-between; } }
+  .subscribe-content { flex-direction: row; justify-content: space-between; }
+  #button-scroll-top { left: 95%; } }

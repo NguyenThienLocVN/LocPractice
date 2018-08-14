@@ -1,9 +1,8 @@
 $(function(){
     menuShow();
     startTimer();
+    scrollTop();
     fixedNav();
-    timer();
-    toCelsius();
 });
 
 
@@ -50,26 +49,47 @@ function startTimer() {
 
 // ===================================================================
 // Function time countdown
-var upgradeTime = 900000;
-var seconds = upgradeTime;
-function timer() {
-    var days        = Math.floor(seconds/24/60/60);
-    var hoursLeft   = Math.floor((seconds) - (days*86400));
-    var hours       = Math.floor(hoursLeft/3600);
-    var minutesLeft = Math.floor((hoursLeft) - (hours*3600));
-    var minutes     = Math.floor(minutesLeft/60);
+
+var seconds = 900000;
+var timer = setInterval(function(){
+    var days = Math.floor(seconds/24/60/60);
+    var hoursLeft = Math.floor((seconds) - (days*86400));
+    var hours = Math.floor(hoursLeft/3600);
+    var minutesLeft = Math.floor((hoursLeft) - (hours)*3600);
+    var minutes = Math.floor(minutesLeft/60);
     var remainingSeconds = seconds % 60;
-    if (remainingSeconds < 10) {
-        remainingSeconds = "0" + remainingSeconds; 
+
+    if(remainingSeconds < 10){
+        remainingSeconds = "0" + remainingSeconds;
     }
+
     document.getElementById('time-number').innerHTML = days + " : " + hours + " : " + minutes + " : " + remainingSeconds;
-    if (seconds == 0) {
-        clearInterval(countdownTimer);
-    } else {
+    if(seconds == 0){
+        clearInterval(timer);
+    }
+    else
+    {
         seconds--;
     }
-}
-var countdownTimer = setInterval('timer()', 1000);
+}, 1000);
+
+// ==================================================================
+// Function click button to scroll to top
+function scrollTop() {
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 100) {
+        $("#button-scroll-top").show();
+      } else {
+        $("#button-scroll-top").hide();
+      }
+    });
+  
+    // When click, the content scroll up to top
+    $("#button-scroll-top").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+    });
+  }
 
 
 
@@ -78,19 +98,17 @@ var countdownTimer = setInterval('timer()', 1000);
 // ===================================================================
 // Function fixed navigation when scroll down
 function fixedNav(){
-    if(window.innerWidth < 768){
-        $(window).scroll(function() {
-          if ($(window).scrollTop() >= 400) {
-            $(".left-menu").addClass("fixed-nav");
-          } else {
-            $(".left-menu").removeClass("fixed-nav");
-          }
-        });
-      }
-}
-
-
-function toCelsius(fahrenheit) {
-    return (5 / 9) * (fahrenheit - 32);
-    alert(5 / 9) * (fahrenheit - 32)
+    $(window).scroll(function() {
+        if ($(window).scrollTop() >= 300) {
+        var leftmenu = $(".left-menu");
+        leftmenu.addClass("fixed-nav");
+        leftmenu.removeClass('left-menu');
+        $('.category-menu').slideUp();
+        $('.hide-menu-left').slideUp();
+        } else {
+        var leftmenu = $(".fixed-nav");
+        leftmenu.addClass("left-menu");
+        leftmenu.removeClass('fixed-nav');
+        }
+    });
 }

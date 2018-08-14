@@ -32,13 +32,12 @@ body{
     background: #d13638;
     color: #fff;
     cursor: pointer;
-    transition: 1s ease-in-out;
 }
 .add-cart:hover{
     background: #fff;
     color:#d13638;
     border: 1px solid #d13638;
-    
+    transition: .5s ease-in-out;
 }
 
 // Class for fixed navigation bar when scroll down
@@ -49,6 +48,8 @@ body{
     width: 100%;
     border-radius: unset;
     z-index: 99;
+    height: 50px;
+    background: #d13638;
 }
 
 .margin{height: 15px;}
@@ -64,12 +65,22 @@ body{
 header{clear: both;}
 
 // ===============Widget =====
-.facebook, .twitter, .feed, .pinterest, .connect{
-    width: 50px;
-    height: 50px;
-    border-radius: 10px 0 0 10px;
-    text-align: center;
-    padding-top: 15px;
+#button-scroll-top{
+    padding: 10px 15px;
+    font-size: 30px;
+    border-radius: 8px;
+    background: #202833;
+    border: 2px solid #202833;
+    display: none;
+    color: #fff;
+    z-index: 999;
+    position: fixed;
+    bottom: 5%;
+    left: 80%;
+    opacity: 0.5;
+}
+#button-scroll-top:hover{
+    opacity: 1;
 }
 
 // ====================================
@@ -191,7 +202,8 @@ header{clear: both;}
     cursor: pointer;
     height: 100%;
 }
-.left-menu-title-1, .left-menu-title-2{
+.left-menu-title-1,
+.left-menu-title-2{
     color:#fff;
     padding: 15px;
     float: left;
@@ -202,7 +214,8 @@ header{clear: both;}
     float: right;
     cursor: pointer;
 }
-.left-menu-title-1:active, .left-menu-title-3:active{
+.left-menu-title-1:active, 
+.left-menu-title-3:active{
     color:#202833;
 }
 .hide-menu-left{position: absolute; top:50px;width: 100%;}
@@ -831,7 +844,7 @@ header{clear: both;}
     .drop:hover .dropdown-content-right {
         position: absolute;
     }
-    .slide{height: 497px;}
+    .slide{height: 497px;position: relative;width: 100%;}
     .slide-img{height: 100%;}
     .slide-text{
         top: 10%;
@@ -892,5 +905,9 @@ header{clear: both;}
     .subscribe-content{
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    #button-scroll-top{
+        left: 95%;
     }
 }
